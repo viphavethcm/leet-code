@@ -1,0 +1,18 @@
+1. Sự khác biệt giữa Abstract class và Interface
+- Abstract class:
+  + Abstract class support concrete method(method với code inside) phù hợp cho những use cases mà cần define behaviour logic chung
+  + Abstract class support abstract method, class con extend đến có thể tự define behaviour riêng
+- Interface class:
+  + Chỉ là 1 blueprint(phác thảo) đề ra chứ bản thân ko thể tự define behaviour mà class con implement đến sẽ phải tự define
+  + Từ Java 8 trở về trước ko support default method và static method, Java 8 trở lên thì có
+
+2. Tại sao Java 8 trở lên lại có default method và static method cho Interface
+- Default method: Giả sử hệ thống đang có 100 class implement 1 interface, nếu có nhu cầu thêm 1 abstract method bên trong là phải đi implement cho
+100 class hiện tại --> Sinh ra default method để ko phải ép buộc các class con phải define, thằng nào cần thì mới override để define behaviour logic
+- static method: Dùng Inteface để define các utility có performance tốt hơn dùng class vì:
+  + Interface là stateless(ko có biến instance)
+  + JVM có thể gọi trực tiếp method luôn chứ không cần thực hiện cơ chế Dynamic Dispatch để tìm method trong runtime
+  --> Interface có thể tối ưu hiệu suất trong một số tình huống, nhưng Class lại linh hoạt hơn nếu có manage instance state hoặc mở rộng
+
+3. Tại sao Java ko có đa kế thừa
+- Vì giả sử các parent class có method cùng tên thì class con sẽ ko biết override method nào --> Diamond Problems
