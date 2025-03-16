@@ -15,8 +15,6 @@ public class BinaryTreeInOrderReversal {
    }
 
    public static List<Integer> inorderTraversal(TreeNode root) {
-      HashMap<Integer, Boolean> visited = new HashMap<>();
-
       List<Integer> res = new ArrayList<>();
       dfs(root, res);
 
