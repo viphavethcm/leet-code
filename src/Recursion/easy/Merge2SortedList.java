@@ -1,6 +1,6 @@
 package Recursion.easy;
 
-import Model.ListNode;
+import Utils.ListNode;
 
 public class Merge2SortedList {
 

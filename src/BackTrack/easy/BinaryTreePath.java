@@ -1,6 +1,6 @@
 package BackTrack.easy;
 
-import Model.TreeNode;
+import Utils.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
