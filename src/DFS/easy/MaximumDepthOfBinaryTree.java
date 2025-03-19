@@ -21,11 +21,4 @@ public class MaximumDepthOfBinaryTree {
       return Math.max(left, right);
    }
 
-   public static void dfs(TreeNode root, int res) {
-      if (root == null) return;
-      res += 1;
-      dfs(root.left, res);
-      dfs(root.right, res);
-   }
-
 }
