@@ -1,0 +1,66 @@
+1. Majority Vote Algorithm
+- Khái niệm
+  + Thuật toán dùng để tìm phần tử xuất hiện nhiều hơn n/2 lần trong một danh sách (n là số phần tử trong danh sách).
+- Ứng dụng: Tìm phần tử chiếm đa số trong mảng với O(n) time và O(1) space.
+- Cài đặt:
+  MAJORITY_VOTE(arr):
+      candidate = None
+      count = 0
+      # Bước 1: Tìm ứng viên
+      FOR num IN arr:
+          IF count == 0:
+              candidate = num
+          IF num == candidate:
+              count += 1
+          ELSE:
+              count -= 1
+      # Bước 2: Kiểm tra lại ứng viên
+      count = 0
+      FOR num IN arr:
+          IF num == candidate:
+              count += 1
+      IF count > len(arr) / 2:
+          RETURN candidate
+      ELSE:
+          RETURN "Không có phần tử chiếm đa số"
+    return (count > nums.length / 2) ? candidate : -1;
+  }
+
+2. Exchange Argument
+- Khái niệm
+  + Là một kỹ thuật chứng minh thuật toán tham lam (LeetCode.Greedy Algorithm) luôn tìm được lời giải tối ưu
+- Ý tưởng chính:
+  + Giả sử có một cách giải tối ưu khác với thuật toán tham lam.
+  + Dùng các phép hoán đổi (exchange step) để biến lời giải tối ưu đó thành lời giải tham lam mà không làm giảm chất lượng.
+  + Nếu có thể thực hiện được điều này, thuật toán tham lam sẽ đảm bảo tối ưu.
+- Ứng dụng:
+  + Khi muốn chứng minh thuật toán tham lam tối ưu.
+  + Áp dụng trong sắp xếp, lập lịch, cắt giảm chi phí, tối ưu hóa tài nguyên.
+- Cài đặt:
+   public static int maxActivities(Activity[] activities) {
+      // Sắp xếp theo thời gian kết thúc tăng dần
+      Arrays.sort(activities, Comparator.comparingInt(a -> a.end));
+
+      int count = 1; // Luôn chọn hoạt động đầu tiên
+      int lastEnd = activities[0].end
+      for (int i = 1; i < activities.length; i++) {
+          if (activities[i].start >= lastEnd) {  // Nếu không trùng lịch
+              count++;
+              lastEnd = activities[i].end;
+          }
+      }
+      return count;
+   }
+
+3. Thuật toán tham lam(LeetCode.Greedy)
+- Khái niệm:
+  + Luôn chọn lựa chọn tối ưu nhất tại mỗi bước mà không quan tâm đến tương lai.
+  + Hy vọng rằng chuỗi các lựa chọn tối ưu cục bộ sẽ dẫn đến lời giải tối ưu toàn cục.
+- Cài đặt:
+GREEDY_ALGORITHM(problem):
+    Sắp xếp dữ liệu nếu cần
+    Khởi tạo biến lưu trữ kết quả
+    WHILE (còn phần tử chưa xử lý):
+        Chọn phần tử tối ưu nhất tại thời điểm đó
+        Cập nhật kết quả
+    Trả về kết quả
