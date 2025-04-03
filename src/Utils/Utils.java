@@ -1,5 +1,6 @@
 package Utils;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Utils {
@@ -16,4 +17,7 @@ public class Utils {
       return arr;
    }
 
+   public static int[] convert(Integer[] arr) {
+      return Arrays.stream(arr).mapToInt(Integer::intValue).toArray();
+   }
 }
