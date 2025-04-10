@@ -3,3 +3,8 @@ Cach 1:
  - Tao 2 pointer, 1 pointer di den cuoi danh sach(fast), 1 pointer di den 1/2 danh sach(slow)
  - Reverse cac phan tu trong pointer slow
  - So sanh reverse pointer slow va pointer head den khi nao pointer slow == null thi stop
+
+Tortoise and Hare Algorithm:
+B1: Set slow và fast = head
+B2: While fast != null && fast.next != null
+B3: Set slow = slow.next và fast = fast.next.next
