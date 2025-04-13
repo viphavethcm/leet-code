@@ -1,8 +1,7 @@
-package DesignPatterns;
+package DesignPatterns.Creational;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 
 // Lí do cần tạo Observer interface vì để decoupling object User và Youtube Channel. Nếu mai mốt có thêm object khác
