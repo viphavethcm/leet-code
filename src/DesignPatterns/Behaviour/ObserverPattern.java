@@ -72,7 +72,7 @@ class YouTubeChannel {
    }
 }
 
-public class ObserverDesignPattern {
+public class ObserverPattern {
 
    public static void main(String[] args) {
       YouTubeChannel channel = new YouTubeChannel();
