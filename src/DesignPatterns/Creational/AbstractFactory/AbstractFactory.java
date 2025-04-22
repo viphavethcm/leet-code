@@ -1,4 +1,4 @@
-package DesignPatterns.Creational;
+package DesignPatterns.Creational.AbstractFactory;
 
 import java.util.Random;
 
