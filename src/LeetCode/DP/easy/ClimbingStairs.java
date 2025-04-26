@@ -1,4 +1,4 @@
-package LeetCode.DP;
+package LeetCode.DP.easy;
 
 import java.util.Scanner;
 
