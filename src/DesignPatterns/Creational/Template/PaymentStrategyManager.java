@@ -1,9 +1,9 @@
-package DesignPatterns.Creational.AbstractFactoryStrategy;
+package DesignPatterns.Creational.Template;
 
-import static DesignPatterns.Creational.AbstractFactoryStrategy.PaymentType.CREDITCARD;
-import static DesignPatterns.Creational.AbstractFactoryStrategy.PaymentType.MOMO;
-import static DesignPatterns.Creational.AbstractFactoryStrategy.PaymentType.PAYPAL;
-import static DesignPatterns.Creational.AbstractFactoryStrategy.PaymentType.ZALOPAY;
+import static DesignPatterns.Creational.Template.PaymentType.CREDITCARD;
+import static DesignPatterns.Creational.Template.PaymentType.MOMO;
+import static DesignPatterns.Creational.Template.PaymentType.PAYPAL;
+import static DesignPatterns.Creational.Template.PaymentType.ZALOPAY;
 
 import java.util.Map;
 import java.util.function.Supplier;

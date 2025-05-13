@@ -1,4 +1,4 @@
-package DesignPatterns.Creational.AbstractFactoryStrategy;
+package DesignPatterns.Creational.Template;
 
 // Abstract Product Strategy
 interface PaymentStrategy {

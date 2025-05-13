@@ -1,4 +1,4 @@
-package DesignPatterns.Creational.AbstractFactoryStrategy;
+package DesignPatterns.Creational.Template;
 
 // Concrete Product
 class ZaloPay implements PaymentStrategy {
