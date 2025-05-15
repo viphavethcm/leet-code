@@ -1,0 +1,10 @@
+Kadane's algorithm
+max_so_far = -∞
+current_sum = 0
+
+for num in arr:
+    current_sum += num
+    if current_sum > max_so_far:
+        max_so_far = current_sum
+    if current_sum < 0:
+        current_sum = 0
