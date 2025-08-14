@@ -1,10 +1,13 @@
 package Utils;
 
+import javax.crypto.Mac;
+import javax.crypto.spec.SecretKeySpec;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Base64;
 import java.util.List;
 import java.util.Scanner;
-
 public class Utils {
 
    public static Integer[] readInput() {
