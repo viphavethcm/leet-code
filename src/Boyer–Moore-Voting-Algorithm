@@ -1,0 +1,17 @@
+Thuật toán được dùng chủ yếu cho bài toán Majority Element:
+    Trong một mảng có n phần tử, tìm phần tử xuất hiện nhiều hơn ⌊n/2⌋ lần.
+
+Mảng: [2, 2, 1, 1, 1, 2, 2]
+Start: candidate = None, count = 0
+Gặp 2 → count = 1, candidate = 2
+Gặp 2 → count = 2
+Gặp 1 → count = 1
+Gặp 1 → count = 0 → reset
+Gặp 1 → candidate = 1, count = 1
+Gặp 2 → count = 0 → reset
+Gặp 2 → candidate = 2, count = 1
+
+candidate = 0, cnt = 0
+for num in nums:
+    if(cnt == 0) candidate = nums[i]
+    else cnt += candidate == nums[i] ? 1 : -1
