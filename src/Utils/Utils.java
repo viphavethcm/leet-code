@@ -18,6 +18,27 @@ public class Utils {
       return arr;
    }
 
+   public static int[][] read2DArray() {
+      Scanner sc = new Scanner(System.in);
+      String input = sc.nextLine().trim();
+
+      // Bỏ ký tự [[ và ]]
+      input = input.substring(2, input.length() - 2);
+
+      // Tách từng hàng
+      String[] rows = input.split("\\],\\[");
+
+      int[][] result = new int[rows.length][];
+      for (int i = 0; i < rows.length; i++) {
+         String[] nums = rows[i].split(",");
+         result[i] = new int[nums.length];
+         for (int j = 0; j < nums.length; j++) {
+            result[i][j] = Integer.parseInt(nums[j].trim());
+         }
+      }
+      return result;
+   }
+
    public static List<int[]> readInputList() {
       Scanner scanner = new Scanner(System.in);
       List<int[]> arrays = new ArrayList<>();
