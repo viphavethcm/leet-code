@@ -1,0 +1,4 @@
+1. Tổng các số trong dãy từ 1 -> n:
+sum = S = n²(n² + 1) / 2
+2. Tổng bình phương của các số trong dãy từ 1 -> n:
+square = n²(n² + 1)(2n² + 1) / 6
