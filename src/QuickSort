@@ -1,0 +1,39 @@
+Phân hoạch Lomuto:
+lomuto_partition(A, low, high):
+    pivot = A[right]         // chọn pivot là phần tử cuối
+    i = left - 1             // i sẽ đánh dấu vị trí cuối cùng của phần tử < pivot
+    for j = left to right:
+        if A[j] <= pivot:
+            i++
+            swap A[i] with A[j]
+    // cuối cùng đưa pivot về đúng chỗ (sau tất cả phần tử <= pivot)
+
+    swap A[i + 1] with A[right]
+
+    return i + 1            // vị trí mới của pivot
+
+public static int lomuto_partition(int[] arr, int left, int right) {
+      int pivot = arr[right];
+      int i = left - 1;
+      for (int j = left; j < right; j++) {
+         if (arr[j] <= pivot) {
+            i++;
+            int tmp = arr[j];
+            arr[j] = arr[i];
+            arr[i] = tmp;
+         }
+      }
+      i++;
+      int tmp = arr[right];
+      arr[right] = arr[i];
+      arr[i] = tmp;
+      return i;
+   }
+
+public static void quickSort(int[] arr, int left, int right) {
+   if (left < right) {
+      int p = partition(arr, left, right);
+      quickSort(arr, left, p - 1);
+      quickSort(arr, p + 1, right);
+   }
+}
