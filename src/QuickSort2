@@ -30,6 +30,21 @@ public static int lomuto_partition(int[] arr, int left, int right) {
       return i;
    }
 
+hoare partition(A, low, high)
+    pivot = A[low]          // chọn pivot là phần tử đầu
+        i = low - 1
+        j = high + 1
+        while true:
+            repeat:
+                i = i + 1
+            until A[i] >= pivot
+            repeat:
+                j = j - 1
+            until A[j] <= pivot
+            if i >= j:
+                return j        // vị trí phân hoạch
+            swap A[i] with A[j]
+
 public static void quickSort(int[] arr, int left, int right) {
    if (left < right) {
       int p = partition(arr, left, right);
