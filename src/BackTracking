@@ -1,0 +1,14 @@
+void backtrack(path, choices) {
+    if (path là lời giải hợp lệ) {
+        lưu kết quả
+        return;
+    }
+
+    for (choice in choices) {
+        nếu choice hợp lệ {
+            thêm choice vào path
+            backtrack(path, choices còn lại)
+            bỏ choice ra khỏi path  // quay lui
+        }
+    }
+}
