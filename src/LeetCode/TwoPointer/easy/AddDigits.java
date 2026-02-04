@@ -1,7 +1,9 @@
 package LeetCode.TwoPointer.easy;
 
 import java.util.Scanner;
-
+/**
+ * https://leetcode.com/problems/add-digits/description/
+ * */
 public class AddDigits {
 
    public static void main(String[] args) {
